@@ -10,7 +10,7 @@ export default {
         "fastHand": ["Fasthand", "cursive"],
       },
       backgroundImage: {
-        "aboutUs": "url('./src/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')"
+        "aboutUs": "url('./public/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')"
       }
     },
   },
