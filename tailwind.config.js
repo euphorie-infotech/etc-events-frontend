@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         "fastHand": ["Fasthand", "cursive"],
+      },
+      backgroundImage: {
+        "aboutUs": "url('./src/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')"
       }
     },
   },

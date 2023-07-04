@@ -524,12 +524,24 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
+}
+
+.sticky{
+  position: sticky;
+}
+
+.inset-0{
+  inset: 0px;
 }
 
 .top-0{
@@ -546,6 +558,10 @@ video {
 
 .z-10{
   z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .mb-5{
@@ -572,24 +588,25 @@ video {
   height: 100vh;
 }
 
-.w-screen{
-  width: 100vw;
-}
-
-.w-auto{
-  width: auto;
-}
-
-.w-1\/2{
-  width: 50%;
-}
-
 .w-3\/4{
   width: 75%;
 }
 
+.w-screen{
+  width: 100vw;
+}
+
 .basis-1\/2{
   flex-basis: 50%;
+}
+
+.basis-1\/4{
+  flex-basis: 25%;
+}
+
+.rotate-12{
+  --tw-rotate: 12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col{
@@ -600,12 +617,24 @@ video {
   align-items: center;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
 
 .justify-between{
   justify-content: space-between;
+}
+
+.overflow-clip{
+  overflow: clip;
+}
+
+.rounded-3xl{
+  border-radius: 1.5rem;
 }
 
 .rounded-lg{
@@ -626,13 +655,49 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-500{
+.bg-sky-700{
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-opacity-30{
+  --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-40{
+  --tw-bg-opacity: 0.4;
+}
+
+.bg-opacity-70{
+  --tw-bg-opacity: 0.7;
 }
 
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-20{
+  --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-90{
+  --tw-bg-opacity: 0.9;
+}
+
+.bg-aboutUs{
+  background-image: url('./src/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg');
+}
+
+.bg-cover{
+  background-size: cover;
 }
 
 .object-cover{
@@ -648,18 +713,9 @@ video {
   padding: 5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .px-3{
@@ -667,32 +723,73 @@ video {
   padding-right: 0.75rem;
 }
 
-.pr-32{
-  padding-right: 8rem;
-}
-
-.pb-3{
+.py-3{
+  padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .pb-5{
   padding-bottom: 1.25rem;
 }
 
+.pl-20{
+  padding-left: 5rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pr-32{
+  padding-right: 8rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
+}
+
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pr-20{
+  padding-right: 5rem;
+}
+
+.text-justify{
+  text-align: justify;
 }
 
 .font-fastHand{
   font-family: Fasthand, cursive;
 }
 
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl{
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-7xl{
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -715,6 +812,10 @@ video {
   text-decoration-line: underline;
 }
 
+.mix-blend-multiply{
+  mix-blend-mode: multiply;
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -723,6 +824,26 @@ video {
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.duration-200{
+  transition-duration: 200ms;
+}
+
+.hover\:scale-110:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-105:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-white:hover{
