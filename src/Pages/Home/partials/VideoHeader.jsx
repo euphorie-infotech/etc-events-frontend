@@ -4,6 +4,7 @@ import headerImage1 from "../../../assets/images/maxwell-collins-OUm4v3mWzoc-uns
 import headerImage2 from "../../../assets/images/jordon-conner-e6BOcvKvphE-unsplash.jpg";
 import headerImage3 from "../../../assets/images/jordon-conner-tIr-PWgSYB4-unsplash.jpg";
 import headerImage4 from "../../../assets/images/muneeb-syed-4_M8uIfPEZw-unsplash.jpg";
+import ReactPlayer from "react-player";
 const VideoHeader = () => {
   return (
     <>
@@ -30,19 +31,19 @@ const VideoHeader = () => {
             Know More
           </button>
         </div>
-        <div className="flex basis-1/2 h-full rotate-12">
+        <div className="flex basis-1/2 h-full">
           <div className="basis-1/2 flex flex-col justify-between">
             <div className="px-3 pb-5 relative">
               <div className="relative w-3/4 rounded-3xl overflow-clip hover:scale-105 transition-all duration-200">
-                <div className="absolute inset-0 bg-sky-700 mix-blend-multiply bg-opacity-40"></div>
-                <div className="absolute inset-0 bg-black mix-blend-multiply bg-opacity-40"></div>
+                <div className="absolute inset-0 bg-sky-700 mix-blend-multiply bg-opacity-20"></div>
+                <div className="absolute inset-0 bg-black mix-blend-multiply bg-opacity-20"></div>
                 <img src={headerImage1} alt="image 1" />
               </div>
             </div>
             <div className="px-3 pb-20 relative">
               <div className="relative w-3/4 rounded-3xl overflow-clip hover:scale-105 transition-all duration-200">
-                <div className="absolute inset-0 bg-sky-700 mix-blend-multiply bg-opacity-40"></div>
-                <div className="absolute inset-0 bg-black mix-blend-multiply bg-opacity-40"></div>
+                <div className="absolute inset-0 bg-sky-700 mix-blend-multiply bg-opacity-20"></div>
+                <div className="absolute inset-0 bg-black mix-blend-multiply bg-opacity-20"></div>
                 <img src={headerImage2} alt="image 2" />
               </div>
             </div>
@@ -50,13 +51,13 @@ const VideoHeader = () => {
           <div className="basis-1/2 flex flex-col justify-between">
             <div className="px-3 pt-20 relative">
               <div className="relative w-3/4 rounded-3xl overflow-clip hover:scale-105 transition-all duration-200">
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 <img src={headerImage3} alt="image 3" />
               </div>
             </div>
             <div className="px-3 pt-5 relative">
               <div className="relative w-3/4 rounded-3xl overflow-clip hover:scale-105 transition-all duration-200">
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 <img src={headerImage4} alt="image 4" />
               </div>
             </div>
