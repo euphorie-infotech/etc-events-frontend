@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "fastHand": ["Fasthand", "cursive"],
+        "roboto": ["Roboto Condensed", "sans-serif"],
+        "nasalization": ['Nasalization', 'sans-serif'],
       },
       backgroundImage: {
-        "aboutUs": "url('/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')"
+        "aboutUs": "url('/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')",
+        "getStarted": "url('/assets/images/yannis-papanastasopoulos-yWF2LLan-_o-unsplash.jpg')"
       }
     },
   },
