@@ -21,12 +21,12 @@ const VideoHeader = () => {
           <h1 className="text-6xl md:text-8xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
             ETC Events
           </h1>
-          <h3 className="text-2xl lg:text-4xl mb-5">
+          {/* <h3 className="text-2xl lg:text-4xl mb-5">
             Let us take care of the
             <span className="underline text-4xl lg:text-5xl ml-3 font-nasalization  hover:tracking-wide transition-all duration-300">
               Details
             </span>
-          </h3>
+          </h3> */}
           <p className="md:pr-28 lg:pr-16 text-justiy text-sm md:text-base lg:text-lg ">
             ETC Events Ltd.- a regional experiential event company that creates
             brand experiences with an impact, and organizes events. We integrate
