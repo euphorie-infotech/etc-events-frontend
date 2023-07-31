@@ -1,4 +1,6 @@
 import React from "react";
+import { postApiData } from "../Services/apiFunctions";
+import axios from "axios";
 
 const PayNowButton = () => {
   ((window, document) => {
@@ -16,14 +18,20 @@ const PayNowButton = () => {
       : window.attachEvent("onload", loader);
   })(window, document);
 
+  const handleSslCommerz = () => {
+    // postApiData({});
+    axios.post("https://admin.etceventsltd.com/public/api/pay", {});
+  };
+
   return (
     <button
-      className="font-nasalization hover:tracking-widest transition-all duration-500 ml-10"
+      className="font-nasalization hover:tracking-widest transition-all duration-500"
       id="sslczPayBtn"
       token="if you have any token validation"
       postdata="your javascript arrays or objects which requires in backend"
       order="If you already have the transaction generated for current order"
-      endpoint="http://127.0.0.1:8000/api/pay"
+      endpoint="https://admin.etceventsltd.com/public/api/pay"
+      // onClick={() => handleSslCommerz()}
     >
       Pay Now
     </button>

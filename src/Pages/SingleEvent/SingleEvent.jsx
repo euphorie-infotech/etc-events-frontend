@@ -1,7 +1,16 @@
 import React from "react";
+import EventHeader from "./partials/EventHeader";
+import EventDetails from "./partials/EventDetails";
+import LineUps from "./partials/LineUps";
 
 const SingleEvent = () => {
-  return <div>Single Event page</div>;
+  return (
+    <>
+      <EventHeader />
+      <EventDetails />
+      <LineUps />
+    </>
+  );
 };
 
 export default SingleEvent;

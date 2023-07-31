@@ -8,3 +8,28 @@
 body {
     font-family: 'Roboto Condensed', sans-serif !important;
 }
+
+#sslczPayBtn {
+    position: relative;
+    background: transparent !important;
+    border: 1px solid white !important;
+    color: #fff !important;
+    padding-inline: 20px !important;
+    padding-block: 8px;
+    border-radius: 4px !important;
+    height: 42px !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    width: 154px !important;
+    transition: all;
+    transition-duration: 500ms;
+    overflow: hidden;
+}
+
+#sslczPayBtn::before {
+    content: none !important;
+}
+#sslczPayBtn::after {
+    content: none  !important;
+}

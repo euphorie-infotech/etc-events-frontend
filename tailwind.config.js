@@ -12,6 +12,7 @@ export default {
       },
       backgroundImage: {
         "aboutUs": "url('/assets/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg')",
+        "events": "url('/assets/images/rachel-coyne-U7HLzMO4SIY-unsplash 2.jpg')",
         "getStarted": "url('/assets/images/yannis-papanastasopoulos-yWF2LLan-_o-unsplash.jpg')"
       }
     },
