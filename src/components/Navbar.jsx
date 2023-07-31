@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo-web.png";
 import PayNowButton from "./PayNowButton";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,10 +9,21 @@ const Navbar = () => {
       <div>
         <img src={logo} alt="logo" className="w-24 sm:w-28 lg:w-56" />
       </div>
-      <div>
-        <h1>Store</h1>
+      <div className="flex">
+        <div className="flex">
+          <Link to="/events">
+            <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              Events
+            </h1>
+          </Link>
+          <Link to="/store">
+            <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              Store
+            </h1>
+          </Link>
+        </div>
+        <PayNowButton />
       </div>
-      <PayNowButton />
     </nav>
   );
 };

@@ -18,12 +18,12 @@ const PayNowButton = () => {
 
   return (
     <button
-      className="font-nasalization"
+      className="font-nasalization hover:tracking-widest transition-all duration-500 ml-10"
       id="sslczPayBtn"
       token="if you have any token validation"
       postdata="your javascript arrays or objects which requires in backend"
       order="If you already have the transaction generated for current order"
-      endpoint="http://sandbox.sslcommerz.com/EasyCheckOut/testcdeaae88e0996d08f0d752169127efe5445"
+      endpoint="http://127.0.0.1:8000/api/pay"
     >
       Pay Now
     </button>
