@@ -34,7 +34,7 @@ const EventDetails = () => {
               size="xl"
               className="mr-3"
             />
-            September 22, 2023
+            September 15, 2023
           </div>
         </div>
         <p className="text-lg">

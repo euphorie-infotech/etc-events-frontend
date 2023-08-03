@@ -8,7 +8,7 @@ const SingleEvent = () => {
     <>
       <EventHeader />
       <EventDetails />
-      <LineUps />
+      {/* <LineUps /> */}
     </>
   );
 };

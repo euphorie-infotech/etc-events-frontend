@@ -14,14 +14,14 @@ const Footer = () => {
       <div className="absolute inset-0 bg-black bg-opacity-95"></div>
       <MicroFooter />
       <div className="relative flex w-full justify-between px-40 ">
-        <div className="basis-1/5">
+        <div className="basis-1/3">
           <img
             src={logo}
             alt="logo"
             className="w-24 sm:w-28 lg:w-56 cursor-pointer"
             onClick={() => navigate("/")}
           />
-          <p className="flex items-center justify-between px-2 font-nasalization">
+          <p className="flex items-center px-2 font-nasalization">
             <span className="text-sm">
               <FontAwesomeIcon icon={faCopyright} size="xs" className="mr-1" />
               {date.getFullYear()}
@@ -29,11 +29,11 @@ const Footer = () => {
             <span className="mx-3">|</span>
             <span>ETC Events Ltd.</span>
           </p>
-          <p className="px-3 text-[10px] text-center">
+          <p className="px-3 text-[10px]">
             Trademarks and Brands are property of the owner
           </p>
         </div>
-        <div className="basis-1/5">
+        {/* <div className="basis-1/5">
           <ul className=" flex flex-col items-center">
             <li
               className="m-2 cursor-pointer font-nasalization"
@@ -60,15 +60,20 @@ const Footer = () => {
               Contact Us
             </li>
           </ul>
-        </div>
-        <div className="basis-1/5">
-          <h1 className="font-nasalization">
-            <span>Address:</span> <br /> House#247, Road#17, <br /> Block#K,
-            South Banasree, <br /> Khilgaon, Dhaka-1219
-          </h1>
-          <h1 className="font-nasalization mt-5 border p-2 text-center rounded-lg">
+        </div> */}
+        <div className="basis-1/3 flex justify-center items-center">
+          <h1 className="font-nasalization mt-5 border p-2 w-1/2 text-center rounded-lg text-sm">
             Trade License: <span className="tracking-widest">4161</span>
           </h1>
+        </div>
+        <div className="basis-1/3 flex justify-end items-center">
+          <div className="">
+            <h1 className="font-nasalization text-sm">
+              <span className="text-base">Address:</span> <br /> House#247,
+              Road#17, Block#K, <br /> South Banasree, Khilgaon, <br />{" "}
+              Dhaka-1219
+            </h1>
+          </div>
         </div>
       </div>
       <div className="relative px-10 pt-10 text-center">

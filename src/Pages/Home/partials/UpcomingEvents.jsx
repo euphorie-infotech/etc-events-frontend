@@ -13,8 +13,6 @@ const UpcomingEvents = ({ className }) => {
         </h1>
         <div className="flex flex-wrap justify-center items-center w-full md:px-10 lg:px-20 py-10">
           <EventsCard />
-          <EventsCard />
-          <EventsCard />
         </div>
       </div>
     </section>
