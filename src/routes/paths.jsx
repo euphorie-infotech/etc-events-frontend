@@ -1,3 +1,4 @@
+import Checkout from "../Pages/Checkout/Checkout";
 import Events from "../Pages/Events/Events";
 import Home from "../Pages/Home/Home";
 import SingleEvent from "../Pages/SingleEvent/SingleEvent";
@@ -17,15 +18,21 @@ export const routes = [
     element: <Store />,
   },
   {
-    id: 2,
+    id: 3,
     name: "Events",
     path: "/events",
     element: <Events />,
   },
   {
-    id: 2,
+    id: 4,
     name: "Single Events",
     path: "/events/:eventId",
     element: <SingleEvent />,
+  },
+  {
+    id: 5,
+    name: "Checkout",
+    path: "/checkout",
+    element: <Checkout />,
   },
 ];

@@ -3,9 +3,10 @@ import eventBanner from "../../../assets/events/poster-02.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
-import PayNowButton from "../../../components/PayNowButton";
+import { useNavigate } from "react-router-dom";
 
 const EventDetails = () => {
+  const navigate = useNavigate();
   return (
     <section className="flex justify-between items-center px-40 py-20 bg-events bg-cover bg-center relative">
       <div className="absolute inset-0 bg-black bg-opacity-95"></div>
@@ -45,7 +46,12 @@ const EventDetails = () => {
           dignissimos? Esse molestiae reprehenderit vitae tempore at?
         </p>
         <div className="mt-10">
-          <PayNowButton />
+          <button
+            className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black "
+            onClick={() => navigate("/checkout")}
+          >
+            Proceed to checkout
+          </button>
         </div>
       </div>
     </section>

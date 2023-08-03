@@ -4,7 +4,7 @@ import lineUp1 from "../../../assets/events/james-2.jpg";
 const LineUps = () => {
   return (
     <section className="bg-getStarted bg-cover bg-center relative p-20">
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       <h1 className="text-7xl font-nasalization text-white text-center relative">
         Event Lineups
