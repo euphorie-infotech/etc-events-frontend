@@ -570,6 +570,10 @@ video {
   margin: 0.5rem;
 }
 
+.m-5{
+  margin: 1.25rem;
+}
+
 .mx-3{
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -583,6 +587,16 @@ video {
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mb-2{
@@ -629,8 +643,20 @@ video {
   margin-top: 1.25rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
 .flex{
   display: flex;
+}
+
+.contents{
+  display: contents;
 }
 
 .hidden{
@@ -657,6 +683,10 @@ video {
   height: 100vh;
 }
 
+.min-h-screen{
+  min-height: 100vh;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -681,6 +711,10 @@ video {
   width: 100vw;
 }
 
+.w-auto{
+  width: auto;
+}
+
 .basis-1\/2{
   flex-basis: 50%;
 }
@@ -703,6 +737,10 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .flex-col{
@@ -759,6 +797,10 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
 }
 
 .border-b{
@@ -946,6 +988,31 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-40{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-28{
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.px-24{
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -1023,6 +1090,11 @@ video {
   font-size: 10px;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1043,9 +1115,9 @@ video {
   line-height: 1rem;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-extralight{
@@ -1056,8 +1128,20 @@ video {
   font-weight: 300;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
 .tracking-widest{
   letter-spacing: 0.1em;
+}
+
+.tracking-wider{
+  letter-spacing: 0.05em;
 }
 
 .text-teal-600{
@@ -1072,6 +1156,10 @@ video {
 
 .underline{
   text-decoration-line: underline;
+}
+
+.underline-offset-2{
+  text-underline-offset: 2px;
 }
 
 .opacity-0{
