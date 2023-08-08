@@ -1,6 +1,8 @@
+import AboutUs from "../Pages/AboutUs/AboutUs";
 import Checkout from "../Pages/Checkout/Checkout";
 import Events from "../Pages/Events/Events";
 import Home from "../Pages/Home/Home";
+
 import SingleEvent from "../Pages/SingleEvent/SingleEvent";
 import Store from "../Pages/Store/Store";
 import PrivacyPolicy from "../components/PrivacyPolicy";
@@ -55,5 +57,11 @@ export const routes = [
     name: "Return and Refund Policy",
     path: "/return-refund",
     element: <ReturnAndRefundPolicy />,
+  },
+  {
+    id: 9,
+    name: "About Us",
+    path: "/aboutUs",
+    element: <AboutUs />,
   },
 ];

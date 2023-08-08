@@ -38,12 +38,14 @@ const EventDetails = () => {
           </div>
         </div>
         <p className="text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aut
-          eaque iure, ipsam doloribus, perspiciatis totam quo, adipisci atque
-          accusantium dolore ad. At voluptatem, temporibus sapiente dignissimos
-          excepturi minima molestias obcaecati inventore. Laborum atque nisi,
-          maiores natus voluptate numquam expedita veniam! Distinctio, quisquam
-          dignissimos? Esse molestiae reprehenderit vitae tempore at?
+          To provide a chance for a significant refreshment in this chaotic
+          city, we plan to organize a sizeable gathering of youth. Additionally,
+          it is firmly within our purview to support the Deshi bands and
+          disseminate their magic among the young. We value and expect our young
+          people to value art and culture. A brand-new band is another thing we
+          want to promote. We are announcing a competition for original song
+          submissions in response to that. The winner will have the honor of
+          going on stage and performing one song live.
         </p>
         <div className="mt-10">
           <button

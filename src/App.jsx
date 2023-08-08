@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { routes } from "./Routes/paths";
+import { routes } from "./routes/paths";
 import Navbar from "./components/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";

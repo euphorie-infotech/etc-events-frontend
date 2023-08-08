@@ -12,6 +12,11 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <div className="flex mr-10">
+          <Link to="/aboutus">
+            <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              About Us
+            </h1>
+          </Link>
           <Link to="/events">
             <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
               Events
