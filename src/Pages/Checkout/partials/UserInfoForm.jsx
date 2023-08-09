@@ -4,12 +4,16 @@ import { useQuery } from "@tanstack/react-query";
 import Select from "react-select";
 import CartCounter from "../../../components/CartCounter";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const UserInfoForm = () => {
   // calender input focus state
   const [isFocused, setIsFocused] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState();
   const [eventInfo, setEventInfo] = useState();
+  const [check, setCheck] = useState(false);
+
+  const navigate = useNavigate();
 
   // initialize react hook form
   const form = useForm();
@@ -93,7 +97,7 @@ const UserInfoForm = () => {
 
   return (
     <form action="submit" onSubmit={handleSubmit(onSubmit)}>
-      <div className="border p-10 rounded-md flex flex-wrap my-3">
+      <div className="border p-10 rounded-md flex flex-wrap">
         <h1 className="text-white font-nasalization text-2xl text-left px-1">
           Customer Information
         </h1>
@@ -164,9 +168,44 @@ const UserInfoForm = () => {
           ))}
         </div>
       </div>
+      <h1 className="text-xs mb-3 text-left mt-1 flex items-center">
+        <input
+          type="checkbox"
+          name="agreement"
+          id="agreement"
+          className="mr-2"
+          checked={check === false ? false : true}
+          onClick={(e) =>
+            e.target.checked === true ? setCheck(true) : setCheck(false)
+          }
+        />
+        I have read and agree to ETC Event Ltd's{" "}
+        <span
+          className="mx-1 font-nasalization cursor-pointer underline"
+          onClick={() => navigate("/terms-conditions")}
+        >
+          Terms & Conditions
+        </span>
+        ,{" "}
+        <span
+          className="mx-1 font-nasalization cursor-pointer underline"
+          onClick={() => navigate("/privacy-policy")}
+        >
+          Privacy Policy
+        </span>{" "}
+        and{" "}
+        <span
+          className="mx-1 font-nasalization cursor-pointer underline"
+          onClick={() => navigate("/return-refund")}
+        >
+          Return & Refund Policy
+        </span>
+        .
+      </h1>
       <button
         type="submit"
         className="border border-white w-full py-2 rounded-md font-nasalization hover:bg-white hover:text-black transition-all duration-500"
+        disabled={check === false ? true : false}
       >
         Confirm Order
       </button>
