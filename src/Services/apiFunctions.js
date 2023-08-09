@@ -18,7 +18,7 @@ export const getApiData = (url) => {
 export const postApiData = async (data) => {
   return new Promise((resolve, reject) => {
     axios
-      .post(apiUrl, data)
+      .post(apiUrl + ".json", data)
       .then((response) => {
         resolve(response.data);
       })

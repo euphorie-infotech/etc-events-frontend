@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import sslCommerce from "../assets/images/sslCommerce.png";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -33,34 +39,6 @@ const Footer = () => {
             Trademarks and Brands are property of the owner
           </p>
         </div>
-        {/* <div className="basis-1/5">
-          <ul className=" flex flex-col items-center">
-            <li
-              className="m-2 cursor-pointer font-nasalization"
-              onClick={() => navigate("/about")}
-            >
-              About Us
-            </li>
-            <li
-              className="m-2 cursor-pointer font-nasalization"
-              onClick={() => navigate("/events")}
-            >
-              Events
-            </li>
-            <li
-              className="m-2 cursor-pointer font-nasalization"
-              onClick={() => navigate("/store")}
-            >
-              Store
-            </li>
-            <li
-              className="m-2 cursor-pointer font-nasalization"
-              onClick={() => navigate("/contact")}
-            >
-              Contact Us
-            </li>
-          </ul>
-        </div> */}
         <div className="basis-1/3 flex justify-center items-center">
           <h1 className="font-nasalization mt-5 border p-2 w-1/2 text-center rounded-lg text-sm">
             Trade License: <span className="tracking-widest">4161</span>
@@ -73,6 +51,40 @@ const Footer = () => {
               Road#17, Block#K, <br /> South Banasree, Khilgaon, <br />{" "}
               Dhaka-1219
             </h1>
+            <div className="flex justify-between items-center mt-5">
+              <a
+                href="https://www.facebook.com/etceventsltd"
+                target="blank"
+                rel="noopener noreferrer"
+                className="border border-white p-2 aspect-square rounded-full hover:scale-125 transition-all duration-500"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                href="https://www.instagram.com/etceventsltd.001/"
+                target="blank"
+                rel="noopener noreferrer"
+                className="border border-white p-2 aspect-square rounded-full hover:scale-125 transition-all duration-500"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                href="https://www.youtube.com/@ETCEvents-ic7do"
+                target="blank"
+                rel="noopener noreferrer"
+                className="border border-white p-2 aspect-square rounded-full hover:scale-125 transition-all duration-500"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/96317227/admin/feed/posts/"
+                target="blank"
+                rel="noopener noreferrer"
+                className="border border-white p-2 aspect-square rounded-full hover:scale-125 transition-all duration-500"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
+            </div>
           </div>
         </div>
       </div>

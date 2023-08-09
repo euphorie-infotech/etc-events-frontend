@@ -6,7 +6,7 @@ const GetStarted = () => {
       {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
       <div className="h-full pt-20 lg:pt-28 pb-16 md:pb-20 lg:pb-48 md:px-24 lg:px-32 flex flex-col justify-end items-center relative bg-black bg-opacity-60 text-center">
         <h1 className="text-4xl lg:text-7xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
-          We execute event <br /> into wonders
+          We execute events <br /> into wonders
         </h1>
 
         <a href="https://www.facebook.com/etceventsltd/" target="blank">

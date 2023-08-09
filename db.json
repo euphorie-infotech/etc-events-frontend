@@ -1,0 +1,60 @@
+{
+    "upcomingEvents" : [
+        {
+            "id": "1",
+            "name": "School of Rock",
+            "volume": "1",
+            "ticket": [
+                {
+                    "id": "1",
+                    "type": "rockers",
+                    "price": 700
+                },
+                {
+                    "id": "2",
+                    "type": "headbangers",
+                    "price": 1000
+                },
+                {
+                    "id": "3",
+                    "type": "aficionado zone",
+                    "price": 1500
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "School of Rock",
+            "volume": "2",
+            "ticket": [
+                {
+                    "type": "rockers",
+                    "price": 800
+                },
+                {
+                    "type": "headbangers",
+                    "price": 1100
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "School of Rock",
+            "volume": "3",
+            "ticket": [
+                {
+                    "type": "rockers",
+                    "price": 1000
+                },
+                {
+                    "type": "headbangers",
+                    "price": 1500
+                },
+                {
+                    "type": "aficionado zone",
+                    "price": 2000
+                }
+            ]
+        }
+    ]
+}

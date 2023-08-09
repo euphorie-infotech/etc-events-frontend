@@ -33,3 +33,7 @@ body {
 #sslczPayBtn::after {
     content: none  !important;
 }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1) !important;
+}

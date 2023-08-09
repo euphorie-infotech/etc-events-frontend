@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \" npm run watch-twind\" ",
+    "dev": "concurrently \"vite\" \"npm run watch-twind\" \"npm run serve-json\" ",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "watch-twind": "npx tailwindcss -i ./src/tailwind.css -o ./src/index.css --watch"
+    "watch-twind": "npx tailwindcss -i ./src/tailwind.css -o ./src/index.css --watch",
+    "serve-json": "json-server --watch -p 4040 db.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -16,17 +17,22 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tanstack/react-query": "^4.32.6",
+    "@tanstack/react-query-devtools": "^4.32.6",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "concurrently": "^8.2.0",
+    "json-server": "^0.17.3",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
     "react-intersection-observer": "^9.5.2",
     "react-player": "^2.12.0",
     "react-router-dom": "^6.14.1",
     "react-router-hash-link": "^2.4.3",
+    "react-select": "^5.7.4",
     "tailwindcss": "^3.3.2",
     "tailwindcss-cli": "^0.1.2"
   },
