@@ -19,17 +19,17 @@ const Navbar = () => {
         >
           <div className="flex bg-black bg-opacity-70 border-2 rounded-md border-white py-5 justify-around">
             <Link to="/aboutus">
-              <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              <h1 className="rounded-sm text-white font-nasalization cursor-pointer sm:px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
                 About Us
               </h1>
             </Link>
             <Link to="/events">
-              <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              <h1 className="rounded-sm text-white font-nasalization cursor-pointer sm:px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
                 Events
               </h1>
             </Link>
             <Link to="/store">
-              <h1 className="rounded-sm text-white font-nasalization cursor-pointer px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
+              <h1 className="rounded-sm text-white font-nasalization cursor-pointer sm:px-5 pb-2 border-b border-white transition-all duration-500 mx-5 hover:tracking-[0.3em]">
                 Store
               </h1>
             </Link>

@@ -11,7 +11,7 @@ const UpcomingEvents = ({ className }) => {
         <h1 className="text-4xl lg:text-7xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300 text-white">
           Upcoming Events
         </h1>
-        <div className="flex flex-wrap justify-center items-center w-full md:px-10 lg:px-20 py-10">
+        <div className="flex flex-wrap justify-center items-center w-full md:px-20 py-10">
           <EventsCard />
         </div>
       </div>

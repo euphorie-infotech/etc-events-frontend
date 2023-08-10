@@ -19,33 +19,33 @@ const Footer = () => {
     <footer className="bg-events bg-cover bg-center bg-no-repeat relative py-10 text-white">
       <div className="absolute inset-0 bg-black bg-opacity-95"></div>
       <MicroFooter />
-      <div className="relative flex w-full justify-between px-40 ">
-        <div className="basis-1/3">
+      <div className="relative flex flex-col sm:flex-row w-full items-center md:justify-between px-10 md:px-20 lg:px-32 ">
+        <div className="basis-full md:basis-1/3">
           <img
             src={logo}
             alt="logo"
-            className="w-24 sm:w-28 lg:w-56 cursor-pointer"
+            className="w-44 lg:w-56 cursor-pointer"
             onClick={() => navigate("/")}
           />
           <p className="flex items-center px-2 font-nasalization">
-            <span className="text-sm">
+            <span className="text-xs md:text-sm">
               <FontAwesomeIcon icon={faCopyright} size="xs" className="mr-1" />
               {date.getFullYear()}
             </span>
             <span className="mx-3">|</span>
-            <span>ETC Events Ltd.</span>
+            <span className="text-xs md:text-sm">ETC Events Ltd.</span>
           </p>
-          <p className="px-3 text-[10px]">
+          <p className="px-3 text-[0.5rem] md:text-[10px]">
             Trademarks and Brands are property of the owner
           </p>
         </div>
-        <div className="basis-1/3 flex justify-center items-center">
-          <h1 className="font-nasalization mt-5 border p-2 w-1/2 text-center rounded-lg text-sm">
+        <div className="basis-full md:basis-1/3 flex sm:justify-center md:items-center">
+          <h1 className="font-nasalization mt-5 border p-2 md:w-1/2 text-center rounded-lg text-xs md:text-sm">
             Trade License: <span className="tracking-widest">4161</span>
           </h1>
         </div>
-        <div className="basis-1/3 flex justify-end items-center">
-          <div className="">
+        <div className="basis-full md:basis-1/3 flex justify-end items-center">
+          <div className="mt-5 md:mt-0 text-center sm:text-left">
             <h1 className="font-nasalization text-sm">
               <span className="text-base">Address:</span> <br /> House#247,
               Road#17, Block#K, <br /> South Banasree, Khilgaon, <br />{" "}
@@ -102,28 +102,28 @@ const Footer = () => {
         </h1>
         <img src={sslCommerce} alt="ssl banner" />
       </div>
-      <div className="w-full relative mt-5 text-center font-nasalization text-xs">
-        <span
-          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer"
+      <div className="w-full relative mt-5 text-center font-nasalization text-xs flex flex-col md:flex-row justify-center">
+        <p
+          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer text-xs md:text-base"
           onClick={() => navigate("/terms-conditions")}
         >
           Terms & Conditions
-        </span>
-        <span className="mx-5">|</span>
-        <span
-          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer"
+        </p>
+        <span className="mx-5 hidden md:inline">|</span>
+        <p
+          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer text-xs md:text-base"
           onClick={() => navigate("/return-refund")}
         >
           Return & Refund Policy
-        </span>
-        <span className="mx-5">|</span>
+        </p>
+        <span className="mx-5 hidden md:inline">|</span>
 
-        <span
-          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer"
+        <p
+          className="hover:underline hover:tracking-widest transition-all duration-500 cursor-pointer text-xs md:text-base"
           onClick={() => navigate("/privacy-policy")}
         >
           Privacy Policy
-        </span>
+        </p>
       </div>
     </footer>
   );

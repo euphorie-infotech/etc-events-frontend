@@ -4,15 +4,15 @@ import passionImage from "../../../assets/images/fabio-traina-46HSTy-xeYo-unspla
 
 const AboutContent = () => {
   return (
-    <section className="bg-black bg-opacity-95 text-white px-20 py-10">
-      <div className="flex relative items-center">
-        <div className="basis-1/2 p-10 ">
+    <section className="bg-black bg-opacity-95 text-white px-10 md:px-16s lg:px-20 py-10">
+      <div className="flex flex-col md:flex-row relative items-center">
+        <div className="md:basis-1/2 md:p-5 lg:p-10 ">
           <div className="relative  rounded-2xl overflow-clip">
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
             <img src={aboutImage} alt="etc events" className="rounded-2xl" />
           </div>
         </div>
-        <div className="basis-1/2 py-10 pr-20">
+        <div className="md:basis-1/2 py-10 lg:pr-20 text-center md:text-left">
           <h1 className="text-2xl lg:text-5xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
             Our Philosophy
           </h1>
@@ -27,8 +27,8 @@ const AboutContent = () => {
           </p>
         </div>
       </div>
-      <div className="flex items-center">
-        <div className="basis-1/2 pr-8">
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="md:basis-1/2 lg:pr-8 text-center md:text-left">
           <h1 className="text-2xl lg:text-5xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
             Passion became Purpose
           </h1>
@@ -55,18 +55,18 @@ const AboutContent = () => {
             full of exceptionally high-quality equipment.
           </p>
         </div>
-        <div className="basis-1/2 p-10">
+        <div className="md:basis-1/2 md:p-10 mt-5 md:mt-0">
           <div className="relative rounded-2xl overflow-clip">
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
             <img src={passionImage} alt="etc events" className="rounded-2xl" />
           </div>
         </div>
       </div>
-      <div className="text-center px-20 py-10">
+      <div className="text-center lg:px-20 py-10">
         <h1 className="text-2xl lg:text-5xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
           The Team
         </h1>
-        <p className="text-sm md:text-base lg:text-lg mt-3 lg:mt-5 px-36">
+        <p className="text-sm md:text-base lg:text-lg mt-3 lg:mt-5 lg:px-36 text-justify">
           The members of the Etc Events team are diverse. A sizable support
           team, in addition to this group, assists the business with everything
           it does, from office work to on-site logistics planning. We are
@@ -74,7 +74,7 @@ const AboutContent = () => {
           say about our team!
         </p>
       </div>
-      <div className="px-20 py-10">
+      <div className="lg:px-20 md:py-10">
         <h1 className="text-2xl lg:text-5xl font-nasalization mb-2 hover:tracking-wide transition-all duration-300">
           How can we help you organize a successful event?
         </h1>
