@@ -10,7 +10,7 @@ const UserInfoForm = () => {
   // calender input focus state
   const [isFocused, setIsFocused] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState();
-  const [check, setCheck] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const navigate = useNavigate();
 
@@ -24,6 +24,8 @@ const UserInfoForm = () => {
     const { ticket, ...eventInfo } = selectedEvent;
     const eventData = { ...data, ...eventInfo, ticket: ticketArray };
     console.log("data", eventData);
+    setIsChecked(false);
+    setSelectedEvent();
     reset();
   };
 
@@ -101,49 +103,69 @@ const UserInfoForm = () => {
         <h1 className="text-white font-nasalization text-2xl text-left px-1">
           Customer Information
         </h1>
-        <div className="basis-1/2 px-1">
+        <div className="basis-1/2 px-1 my-2 text-left">
           <input
             type="text"
             name="name"
             id="name"
             placeholder="Full Name"
-            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none my-2"
-            {...register("name")}
+            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none"
+            {...register("name", { required: true })}
           />
+          {errors.name && errors.name.type === "required" && (
+            <span className="text-red-600 font-nasalization text-xs font-thin">
+              **This field is required**
+            </span>
+          )}
         </div>
-        <div className="basis-1/2 px-1">
+        <div className="basis-1/2 px-1 my-2 text-left">
           <input
             type="text"
             name="email"
             id="email"
             placeholder="Email Address"
-            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none my-2"
-            {...register("email")}
+            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none"
+            {...register("email", { required: true })}
           />
+          {errors.email && errors.email.type === "required" && (
+            <span className="text-red-600 font-nasalization text-xs font-thin">
+              **This field is required**
+            </span>
+          )}
         </div>
-        <div className="basis-1/2 px-1">
+        <div className="basis-1/2 px-1 my-2 text-left">
           <input
             type="tel"
             name="phone"
             id="phone"
             placeholder="Phone Number"
-            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none my-2"
-            {...register("phone")}
+            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none"
+            {...register("phone", { required: true })}
           />
+          {errors.phone && errors.phone.type === "required" && (
+            <span className="text-red-600 font-nasalization text-xs font-thin">
+              **This field is required**
+            </span>
+          )}
         </div>
-        <div className="basis-1/2 px-1">
+        <div className="basis-1/2 px-1 my-2 text-left">
           <input
             type={isFocused ? "date" : "text"}
             name="dateOfBirth"
             id="dateOfBirth"
             placeholder="Date of Birth"
-            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none my-2"
+            className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none"
             onFocus={() => setIsFocused(true)}
             onBlur={(e) => {
               e.target.value === "" && setIsFocused(false);
             }}
-            {...register("dateOfBirth")}
+            {...register("dateOfBirth", { required: true })}
           />
+          {errors.dateOfBirth && errors.dateOfBirth.type === "required" && (
+            <span className="text-red-600 font-nasalization text-xs font-thin">
+              **This field is required**
+            </span>
+          )}
         </div>
         <div className="basis-full px-1">
           <Select
@@ -174,9 +196,9 @@ const UserInfoForm = () => {
           name="agreement"
           id="agreement"
           className="mr-2"
-          checked={check === false ? false : true}
-          onClick={(e) =>
-            e.target.checked === true ? setCheck(true) : setCheck(false)
+          checked={isChecked}
+          onChange={(e) =>
+            e.target.checked === true ? setIsChecked(true) : setIsChecked(false)
           }
         />
         I have read and agree to ETC Event Ltd's{" "}
@@ -204,8 +226,8 @@ const UserInfoForm = () => {
       </h1>
       <button
         type="submit"
-        className="border border-white w-full py-2 rounded-md font-nasalization hover:bg-white hover:text-black transition-all duration-500"
-        disabled={check === false ? true : false}
+        className="border border-white w-full py-2 rounded-md font-nasalization hover:bg-white hover:text-black transition-all duration-500 disabled:border-gray-600 disabled:text-gray-600 disabled:hover:bg-transparent"
+        disabled={isChecked === false ? true : false}
       >
         Confirm Order
       </button>

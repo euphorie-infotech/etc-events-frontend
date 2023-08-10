@@ -61,7 +61,7 @@ export const routes = [
   {
     id: 9,
     name: "About Us",
-    path: "/aboutUs",
+    path: "/aboutus",
     element: <AboutUs />,
   },
 ];
