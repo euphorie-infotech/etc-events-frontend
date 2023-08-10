@@ -1,9 +1,9 @@
 {
     "upcomingEvents" : [
         {
-            "id": "1",
-            "name": "School of Rock",
-            "volume": "1",
+            "eventId": "1",
+            "eventName": "School of Rock",
+            "eventVolume": "1",
             "ticket": [
                 {
                     "id": "1",
@@ -23,9 +23,9 @@
             ]
         },
         {
-            "id": "2",
-            "name": "School of Rock",
-            "volume": "2",
+            "eventId": "2",
+            "eventName": "School of Rock",
+            "eventVolume": "2",
             "ticket": [
                 {
                     "type": "rockers",
@@ -38,9 +38,9 @@
             ]
         },
         {
-            "id": "3",
-            "name": "School of Rock",
-            "volume": "3",
+            "eventId": "3",
+            "eventName": "School of Rock",
+            "eventVolume": "3",
             "ticket": [
                 {
                     "type": "rockers",

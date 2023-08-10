@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { routes } from "./routes/paths";
-import Navbar from "./components/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   const { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

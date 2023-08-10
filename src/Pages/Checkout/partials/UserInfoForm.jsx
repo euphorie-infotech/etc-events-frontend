@@ -10,7 +10,6 @@ const UserInfoForm = () => {
   // calender input focus state
   const [isFocused, setIsFocused] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState();
-  const [eventInfo, setEventInfo] = useState();
   const [check, setCheck] = useState(false);
 
   const navigate = useNavigate();
@@ -19,10 +18,12 @@ const UserInfoForm = () => {
   const form = useForm();
   const { register, control, handleSubmit, reset, formState } = form;
   const { errors } = formState;
+
+  // submit handler
   const onSubmit = (data) => {
-    const { event, ...userInfo } = data;
-    const finalData = { ...userInfo, ...eventInfo };
-    console.log("data", userInfo);
+    const { ticket, ...eventInfo } = selectedEvent;
+    const eventData = { ...data, ...eventInfo, ticket: ticketArray };
+    console.log("data", eventData);
     reset();
   };
 
@@ -76,23 +77,22 @@ const UserInfoForm = () => {
     data.map((item) => {
       options.push({
         ...item,
-        value: `${item.name} (vol-${item.volume})`,
-        label: `${item.name} (vol-${item.volume})`,
+        value: `${item.eventName} (vol-${item.eventVolume})`,
+        label: `${item.eventName} (vol-${item.eventVolume})`,
       });
     });
   }
 
-  // count ticket
-  let tickets = [];
-  let purchaseInfo = [];
-  const countHandler = (value, index) => {
-    // console.log(value, index);
-    selectedEvent?.ticket.map((item, itemIndex) => {
-      // console.log(item, itemIndex);
-      index === itemIndex &&
-        purchaseInfo.push({ ...item, purchasedAmount: value }) &&
-        console.log("info", purchaseInfo, index, itemIndex);
-    });
+  // ticket count
+  const ticketArray = [];
+  const countHandler = (value) => {
+    // console.log("from parent", value.id);
+    selectedEvent?.ticket.filter(
+      (item, index) =>
+        item.id === value.id &&
+        (ticketArray[index] = { ...item, ticketCount: value.ticketCount })
+    );
+    // console.log("ticketarray", ticketArray);
   };
 
   return (
@@ -157,13 +157,13 @@ const UserInfoForm = () => {
           />
         </div>
         <div className="w-full flex mt-3">
-          {selectedEvent?.ticket.map((ticket, index) => (
+          {selectedEvent?.ticket.map((ticket) => (
             <div className="font-nasalization basis-1/3 px-5" key={ticket.type}>
               <h1 className="border border-white px-5 py-3 rounded-xl cursor-pointer bg-white text-black">
                 {ticket.price}
               </h1>
               <h1>{ticket.type}</h1>
-              <CartCounter countHandler={countHandler} index={index} />
+              <CartCounter ticketInfo={ticket} clickHandler={countHandler} />
             </div>
           ))}
         </div>
