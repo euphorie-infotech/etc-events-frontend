@@ -2,14 +2,14 @@ import React from "react";
 
 const ReturnAndRefundPolicy = () => {
   return (
-    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-40 py-40 text-white">
-      <div className="border-2 border-white p-20 rounded-3xl flex justify-center items-center bg-black text-center">
-        <h1 className="font-nasalization text-7xl tracking-wider">
+    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-12 lg:px-40 py-40 text-white">
+      <div className="border-2 border-white p-5 lg:p-20 rounded-3xl flex justify-center items-center bg-black text-center">
+        <h1 className="font-nasalization text-4xl lg:text-7xl tracking-wider">
           Return & Refund Policy
         </h1>
       </div>
       <div className="my-10">
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">
             Products can be refunded only in the cases of:
           </h1>
@@ -24,7 +24,7 @@ const ReturnAndRefundPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">How to refund:</h1>
           <ul className="list-disc px-10">
             <li>
@@ -66,7 +66,7 @@ const ReturnAndRefundPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Please Note: </h1>
           <ul className="list-disc px-10">
             <li>

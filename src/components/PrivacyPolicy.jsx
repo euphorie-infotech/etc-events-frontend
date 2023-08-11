@@ -2,21 +2,21 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-40 py-40 text-white">
-      <div className="border-2 border-white p-20 rounded-3xl flex justify-center items-center bg-black">
-        <h1 className="font-nasalization text-7xl tracking-wider">
+    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-12 lg:px-40 py-40 text-white">
+      <div className="border-2 border-white p-5 lg:p-20 rounded-3xl flex justify-center items-center bg-black text-center">
+        <h1 className="font-nasalization text-4xl lg:text-7xl tracking-wider">
           Privacy Policy
         </h1>
       </div>
       <div className="my-10">
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Providing Consent:</h1>
           <p className="text-sm">
             By using our website, you consent to our Privacy Policy and agree to
             its terms.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">
             Information We Collect:{" "}
           </h1>
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">
             We use the information we collect to:
           </h1>
@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">
             Data Protection Rights:{" "}
           </h1>

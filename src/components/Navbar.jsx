@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <nav className="fixed z-50">
-      <div className="w-screen z-50 px-10 md:px-12 lg:px-20 relative bg-black bg-opacity-50 border-b-2 border-white flex justify-between items-center">
+      <div className="w-screen z-50 px-10 md:px-12 lg:px-20 py-5 relative bg-black bg-opacity-50 border-b-2 border-white flex justify-between items-center">
         <div
           className={`absolute sm:hidden top-full left-0 py-1 px-5 w-screen ${
             !menuOpen ? "opacity-0" : "opacity-100"
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => navigate("/")}>
-          <img src={logo} alt="logo" className="w-24 sm:w-28 lg:w-56" />
+          <img src={logo} alt="logo" className="w-32 lg:w-56" />
         </div>
         <div className="items-center flex justify-end relative w-full">
           <div
@@ -45,7 +45,7 @@ const Navbar = () => {
           >
             <FontAwesomeIcon
               icon={!menuOpen ? faMaximize : faMinimize}
-              size="xl"
+              size="lg"
             />
           </div>
           <div className="hidden sm:flex">

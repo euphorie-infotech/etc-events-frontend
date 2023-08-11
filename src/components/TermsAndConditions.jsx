@@ -2,14 +2,14 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-40 py-40 text-white">
-      <div className="border-2 border-white p-20 rounded-3xl flex justify-center items-center bg-black">
-        <h1 className="font-nasalization text-7xl tracking-wider">
+    <section className="bg-black bg-opacity-90 w-screen min-h-screen px-12 lg:px-40 py-40 text-white">
+      <div className="border-2 border-white p-5 lg:p-20 rounded-3xl flex justify-center items-center bg-black text-center">
+        <h1 className="font-nasalization text-4xl lg:text-7xl tracking-wider">
           Terms & Conditions
         </h1>
       </div>
       <div className="my-10">
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Acceptable Use Policy:</h1>
           <p className="text-sm">
             You agree to use ETC Events Ltd only for lawful purposes and in a
@@ -17,7 +17,7 @@ const TermsAndConditions = () => {
             but not limited to intellectual property rights.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Merchandises</h1>
           <ul className="list-disc px-10">
             <li>
@@ -86,14 +86,14 @@ const TermsAndConditions = () => {
             </li>
           </ul>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Payment Policy: </h1>
           <p className="text-sm">
             ETC Events Ltd charges a service fee for every ticket sold through
             our platform. This fee is non-refundable.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Refund Policy: </h1>
           <p className="text-sm">
             ETC Events Ltd's refund policy varies depending on the event
@@ -106,7 +106,7 @@ const TermsAndConditions = () => {
             refund.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Privacy Policy:</h1>
           <p className="text-sm">
             ETC Events Ltd respects your privacy and is committed to protecting
@@ -114,7 +114,7 @@ const TermsAndConditions = () => {
             information for the purposes outlined in our Privacy Policy.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">Intellectual Property:</h1>
           <p className="text-sm">
             ETC Events Ltd and its content are protected by copyright,
@@ -123,7 +123,7 @@ const TermsAndConditions = () => {
             consent.
           </p>
         </div>
-        <div className="py-3 px-24">
+        <div className="py-3 lg:px-24">
           <h1 className="text-xl font-nasalization">
             Limitation of Liability:{" "}
           </h1>

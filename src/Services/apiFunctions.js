@@ -1,14 +1,16 @@
 import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+const liveApiUrl = import.meta.env.VITE_REACT_APP_LIVE_API_URL;
 
 // function to get data from api using axios
 export const getApiData = (url) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(apiUrl + "/" + url )
+      .get(liveApiUrl + "/" + url )
       .then((response) => {
         resolve(response.data);
+        console.log(response.data);
       })
       .catch(reject);
   });

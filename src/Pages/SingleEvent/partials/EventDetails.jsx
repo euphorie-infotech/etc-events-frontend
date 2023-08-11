@@ -49,7 +49,7 @@ const EventDetails = () => {
         </p>
         <div className="mt-10">
           <button
-            className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black "
+            className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black w-full"
             onClick={() => navigate("/checkout")}
           >
             Proceed to checkout

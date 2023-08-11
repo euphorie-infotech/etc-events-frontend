@@ -31,7 +31,7 @@ const UserInfoForm = () => {
 
   // fetching data using usequery
   const getUpcomingEvents = () => {
-    return getApiData("upcomingEvents");
+    return getApiData("upcoming-event");
   };
 
   const { isLoading, isError, error, data } = useQuery(
@@ -76,7 +76,7 @@ const UserInfoForm = () => {
 
   const options = [];
   {
-    data.map((item) => {
+    data.upcomingEvents.map((item) => {
       options.push({
         ...item,
         value: `${item.eventName} (vol-${item.eventVolume})`,
