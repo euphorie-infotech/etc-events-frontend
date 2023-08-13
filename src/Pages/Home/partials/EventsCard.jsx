@@ -34,7 +34,7 @@ const EventsCard = () => {
                 size="xl"
                 className="mr-5"
               />
-              September 22, 2023
+              September 15, 2023
             </div>
           </div>
           <button

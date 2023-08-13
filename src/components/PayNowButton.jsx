@@ -2,7 +2,7 @@ import React from "react";
 import { postApiData } from "../Services/apiFunctions";
 import axios from "axios";
 
-const PayNowButton = () => {
+const PayNowButton = ({ callbackFn }) => {
   ((window, document) => {
     var loader = () => {
       var script = document.createElement("script"),
@@ -21,6 +21,7 @@ const PayNowButton = () => {
   const handleSslCommerz = () => {
     // postApiData({});
     axios.post("https://admin.etceventsltd.com/public/api/pay", {});
+    // callbackFn();
   };
 
   return (
@@ -31,7 +32,7 @@ const PayNowButton = () => {
       postdata="your javascript arrays or objects which requires in backend"
       order="If you already have the transaction generated for current order"
       endpoint="https://admin.etceventsltd.com/public/api/pay"
-      // onClick={() => handleSslCommerz()}
+      onClick={() => handleSslCommerz()}
     >
       Pay Now
     </button>

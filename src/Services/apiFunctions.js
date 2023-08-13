@@ -17,10 +17,10 @@ export const getApiData = (url) => {
 };
 
 // function to post data to api using axios
-export const postApiData = async (data) => {
+export const postApiData = async (url, data) => {
   return new Promise((resolve, reject) => {
     axios
-      .post(apiUrl + ".json", data)
+      .post(liveApiUrl + "/" + url, data)
       .then((response) => {
         resolve(response.data);
       })
