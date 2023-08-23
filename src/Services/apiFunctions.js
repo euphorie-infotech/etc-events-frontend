@@ -18,14 +18,24 @@ export const getApiData = (url) => {
 
 // function to post data to api using axios
 export const postApiData = async (url, data) => {
-  return new Promise((resolve, reject) => {
     axios
       .post(liveApiUrl + "/" + url, data)
       .then((response) => {
-        resolve(response.data);
+        console.log(response);
+        window.location.replace(response.data.data);
       })
-      .catch(reject);
-  });
+      .catch(error => {
+        console.log(error)
+      });
+  // return new Promise((resolve, reject) => {
+  //   console.log(liveApiUrl + "/" + url)
+  //   axios
+  //     .post(liveApiUrl + "/" + url, data)
+  //     .then((response) => {
+  //       resolve(response.data);
+  //     })
+  //     .catch(reject);
+  // });
 };
 
 // function to update data using axios

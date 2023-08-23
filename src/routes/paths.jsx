@@ -5,8 +5,11 @@ import Home from "../Pages/Home/Home";
 
 import SingleEvent from "../Pages/SingleEvent/SingleEvent";
 import Store from "../Pages/Store/Store";
+import CancelUrl from "../components/CancelUrl";
+import FailedUrl from "../components/FailedUrl";
 import PrivacyPolicy from "../components/PrivacyPolicy";
 import ReturnAndRefundPolicy from "../components/ReturnAndRefundPolicy";
+import SuccessUrl from "../components/SuccessUrl";
 import TermsAndConditions from "../components/TermsAndConditions";
 
 export const routes = [
@@ -63,5 +66,23 @@ export const routes = [
     name: "About Us",
     path: "/aboutus",
     element: <AboutUs />,
+  },
+  {
+    id: 10,
+    name: "Payment Success",
+    path: "/success",
+    element: <SuccessUrl />,
+  },
+  {
+    id: 11,
+    name: "Payment Failed",
+    path: "/failed",
+    element: <FailedUrl />,
+  },
+  {
+    id: 12,
+    name: "Payment Cancelled",
+    path: "/cancelled",
+    element: <CancelUrl />,
   },
 ];

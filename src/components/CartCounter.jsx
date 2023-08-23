@@ -11,7 +11,7 @@ const CartCounter = ({ ticketInfo, clickHandler }) => {
   };
   return (
     <>
-      <div className="flex w-full border items-center justify-between rounded-2xl mt-3 bg-white text-black">
+      <div className="flex w-full border items-center justify-between rounded-2xl mt-1 bg-white text-black">
         <div className="basis-1/3 cursor-pointer">
           <FontAwesomeIcon
             icon={faMinus}

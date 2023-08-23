@@ -17,7 +17,7 @@ const EventDetails = () => {
         <h1 className="text-xl md:text-3xl lg:text-5xl xl:text-7xl font-nasalization">
           The School Of Rock - (<span>Vol-01</span>)
         </h1>
-        <div className="flex mb-5">
+        <div className="flex flex-col md:flex-row mb-5">
           <div className="flex text-white font-roboto my-2 mr-10">
             <FontAwesomeIcon
               icon={faLocationCrosshairs}
@@ -37,7 +37,7 @@ const EventDetails = () => {
             September 15, 2023
           </div>
         </div>
-        <p className="text-lg text-justify">
+        <p className="text-sm md:text-base lg:text-lg mt-3 lg:mt-5">
           To provide a chance for a significant refreshment in this chaotic
           city, we plan to organize a sizeable gathering of youth. Additionally,
           it is firmly within our purview to support the Deshi bands and
@@ -47,12 +47,35 @@ const EventDetails = () => {
           submissions in response to that. The winner will have the honor of
           going on stage and performing one song live.
         </p>
-        <div className="mt-10">
-          <button
+        <div className="my-10 text-center">
+          <h1 className="font-nasalization mb-5 text-xl">Ticket Category</h1>
+          <div className="flex flex-wrap items-center justify-center">
+            <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
+              <h1 className="font-nasalization">Early Birds</h1>
+            </div>
+            <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
+              <h1 className="font-nasalization">Rockers</h1>
+            </div>
+            <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
+              <h1 className="font-nasalization">Headbangers</h1>
+            </div>
+            <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
+              <h1 className="font-nasalization">Aficionado Zone</h1>
+            </div>
+          </div>
+        </div>
+        <div>
+          {/* <button
             className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black w-full"
             onClick={() => navigate("/checkout")}
           >
             Proceed to checkout
+          </button> */}
+          <button
+            className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black w-full"
+            // onClick={() => navigate("/checkout")}
+          >
+            Tickets will be open soon!!!
           </button>
         </div>
       </div>

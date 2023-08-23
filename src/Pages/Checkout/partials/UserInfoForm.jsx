@@ -189,20 +189,22 @@ const UserInfoForm = ({ passData }) => {
                 className="w-full my-2"
               />
             </div>
-            <div className="mx-auto flex mt-3">
+            <div className="mx-auto flex flex-wrap justify-center mt-3">
               {selectedEvent?.ticket.map((ticket) => (
-                <div
-                  className="font-nasalization basis-1/3 px-1 xl:px-5"
-                  key={ticket.type}
-                >
-                  <h1 className="border border-white px-5 py-3 rounded-xl cursor-pointer bg-white text-black">
-                    {ticket.price}
-                  </h1>
-                  <h1>{ticket.type}</h1>
-                  <CartCounter
-                    ticketInfo={ticket}
-                    clickHandler={countHandler}
-                  />
+                <div className="p-1 basis-1/2 ">
+                  <div
+                    className="font-nasalization px-1 xl:px-5 border-2 py-5 rounded-xl"
+                    key={ticket.type}
+                  >
+                    <h1 className="border border-white px-5 py-3 rounded-xl cursor-pointer bg-white text-black">
+                      {ticket.price}
+                    </h1>
+                    <h1>{ticket.type}</h1>
+                    <CartCounter
+                      ticketInfo={ticket}
+                      clickHandler={countHandler}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -248,11 +250,11 @@ const UserInfoForm = ({ passData }) => {
             className="border border-white w-full py-2 rounded-md font-nasalization hover:bg-white hover:text-black transition-all duration-500 disabled:border-gray-600 disabled:text-gray-600 disabled:hover:bg-transparent"
             disabled={isChecked === false ? true : false}
           >
-            Confirm Order
+            Place Order
           </button>
         </div>
       </form>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </div>
   );
 };

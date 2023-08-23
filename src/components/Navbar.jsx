@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo-web.png";
-import PayNowButton from "./PayNowButton";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMaximize, faMinimize } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(menuOpen);
+
   const navigate = useNavigate();
   return (
     <nav className="fixed z-50">

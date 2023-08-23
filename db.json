@@ -1,60 +1,93 @@
 {
-    "upcomingEvents" : [
+  "upcomingEvents": [
+    {
+      "eventId": "1",
+      "eventName": "School of Rock",
+      "eventVolume": "1",
+      "ticket": [
         {
-            "eventId": "1",
-            "eventName": "School of Rock",
-            "eventVolume": "1",
-            "ticket": [
-                {
-                    "id": "1",
-                    "type": "rockers",
-                    "price": 700
-                },
-                {
-                    "id": "2",
-                    "type": "headbangers",
-                    "price": 1000
-                },
-                {
-                    "id": "3",
-                    "type": "aficionado",
-                    "price": 1500
-                }
-            ]
+          "id": "1",
+          "type": "early birds",
+          "price": 800,
+          "active": true
         },
         {
-            "eventId": "2",
-            "eventName": "School of Rock",
-            "eventVolume": "2",
-            "ticket": [
-                {
-                    "type": "rockers",
-                    "price": 800
-                },
-                {
-                    "type": "headbangers",
-                    "price": 1100
-                }
-            ]
+          "id": "2",
+          "type": "rockers",
+          "price": 1000,
+          "active": true
         },
         {
-            "eventId": "3",
-            "eventName": "School of Rock",
-            "eventVolume": "3",
-            "ticket": [
-                {
-                    "type": "rockers",
-                    "price": 1000
-                },
-                {
-                    "type": "headbangers",
-                    "price": 1500
-                },
-                {
-                    "type": "aficionado zone",
-                    "price": 2000
-                }
-            ]
+          "id": "3",
+          "type": "headbangers",
+          "price": 1200,
+          "active": true
+        },
+        {
+          "id": "4",
+          "type": "aficionado",
+          "price": 1500,
+          "active": true
         }
-    ]
+      ],
+      "lineUp": [
+        {
+          "id": 1,
+          "bandName": "Avoid Rafa",
+          "description": "One of the leading rock bands in the country formed by vocalist and multi-instrumentalist Raef al Hasan Rafa. The band has one studio album titled “Bhaar” which was released in 2016. Avoidrafa has performed in hundreds of shows around the country and has graced the biggest stages.",
+          "isFeatured": false,
+          "active": true
+        },
+        {
+          "id": 2,
+          "bandName": "Warfaze",
+          "description": "One of the pioneers and most legendary bands of Bangla Rock/Metal, Warfaze has been active since 1984. The band has released 8 albums and has 7 members currently. Warfaze is gearing up to release “Pothchola 2” and has already unveiled 2 singles off the album to widespread praise.",
+          "isFeatured": false,
+          "active": false
+        },
+        {
+          "id": 4,
+          "bandName": "Karnival",
+          "description": "Karnival started their journey on July 13, 2006.Having influences from Beatles, Pink Folyd, Radiohead, Motorhead, Alice in chains, Oasis, Porcupine tree, Nirvana, Megadeth etc. They specialize in Experimental and Grunge Rock. They have four albums titled Indraloy Attotshorgo, Dysfunctional Motion Picture and Mohomukti.",
+          "isFeatured": false,
+          "active": false
+        },
+        {
+          "id": 5,
+          "bandName": "After Math",
+          "description": "Aftermath is a grunge and alternative rock band which got underway back in September 2006. The band has one album titled “Jed” consisting of eight tracks and has graced stages all over Bangladesh and has very recently performed in Kolkata as well.",
+          "isFeatured": false,
+          "active": false
+        },
+        {
+          "id": 6,
+          "bandName": "Plasmic Knock",
+          "description": "A heavy metal band formed in 2009. Plasmic Knock currently has two studio albums “Mrito Shovvota” and “Norokito Prithibi”. They are known for their heavy music and have amassed a good following in the metal scene.",
+          "isFeatured": false,
+          "active": false
+        },
+        {
+          "id": 7,
+          "bandName": "Nagar Baul",
+          "description": "Affectionately called “Guru” by his fans, Nagar Baul James is the biggest rockstar in the country. He has also sung on timeless Bollywood classics such as “Bheegi Bheegi”, “Alvida” and many other songs. He has successfully blended rock with folk to catapault his popularity to untouchable heights. Even after a career spanning more than four decades, he still remains a mammoth figure in the music industry.",
+          "isFeatured": true,
+          "active": false
+        },
+        {
+          "id": 8,
+          "bandName": "Shonar Bangla Circus",
+          "description": "Shonar Bangla Circus is a Psychedelic Rock band consisting of five members. They released their debut album “Hyena Express” in 2020 to great acclaim nationwide. They are known for their hard hitting lyricism and energetic live performance.",
+          "isFeatured": false,
+          "active": false
+        },
+        {
+          "id": 9,
+          "bandName": "A.K Rahul",
+          "description": "The solo band of guitarist, drummer and composer A.K. Rahul. The band has live toured in one of the biggest shows in Kolkata, India Moitree Concert and they have performed over 35 concerts in a year. Let’s not forget the recent release ‘We Are One’ making it one of the most successful modern metal release in while.",
+          "isFeatured": false,
+          "active": false
+        }
+      ]
+    }
+  ]
 }

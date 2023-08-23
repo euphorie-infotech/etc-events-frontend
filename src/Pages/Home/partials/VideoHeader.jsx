@@ -1,5 +1,6 @@
 import React from "react";
 import bgVideo from "../../../assets/videos/lights_-_114088 (Original)-1.mp4";
+import bgVideoPoster from "../../../assets/videos/lights_-_114088-(Original)-1.jpg";
 import headerImage1 from "../../../assets/images/jana-kunz-Ra3-o60F1rc-unsplash.jpg";
 import headerImage2 from "../../../assets/images/sandra-seitamaa-Zcr67MPWsSM-unsplash.jpg";
 import headerImage3 from "../../../assets/images/blake-carpenter-HkvRp7ZL8Ug-unsplash.jpg";
@@ -11,6 +12,7 @@ const VideoHeader = () => {
       <video
         src={bgVideo}
         autoPlay
+        poster={bgVideoPoster}
         loop
         muted
         className="w-screen h-screen absolute top-0 object-cover aspect-video p-0 -z-10"
