@@ -3,7 +3,7 @@ import { getApiData } from "../../../Services/apiFunctions";
 import { useQuery } from "@tanstack/react-query";
 import Select from "react-select";
 import CartCounter from "../../../components/CartCounter";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 
@@ -48,13 +48,30 @@ const UserInfoForm = ({ passData }) => {
     getUpcomingEvents
   );
 
-  if (isLoading) {
+  const getTicketSoldAmount = () => {
+    return getApiData("ticket_count");
+  };
+
+  const {
+    isLoading: isSoldTicketLoading,
+    isError: isSoldTicketError,
+    error: soldTicketError,
+    data: soldTicketData,
+  } = useQuery(["sold-tickets"], getTicketSoldAmount);
+
+  if (isLoading || isSoldTicketLoading) {
     return "Loading please wait";
   }
 
   if (isError) {
     return error.message;
   }
+
+  if (isSoldTicketError) {
+    return soldTicketError.message;
+  }
+
+  const ticketsSold = soldTicketData.data;
 
   // changing custom styles for react select component
   const styles = {
@@ -97,13 +114,13 @@ const UserInfoForm = ({ passData }) => {
   // ticket count
   const ticketArray = [];
   const countHandler = (value) => {
-    // console.log("from parent", value.id);
+    const countTicket = value.ticketCount > 0 ? value.ticketCount : 0;
+
     selectedEvent?.ticket.filter(
       (item, index) =>
         item.id === value.id &&
-        (ticketArray[index] = { ...item, ticketCount: value.ticketCount })
+        (ticketArray[index] = { ...item, ticketCount: countTicket })
     );
-    // console.log("ticketarray", ticketArray);
   };
 
   return (
@@ -136,13 +153,18 @@ const UserInfoForm = ({ passData }) => {
                 id="email"
                 placeholder="Email Address"
                 className="w-full bg-transparent font-nasalization rounded-lg border border-white py-1 px-3 placeholder:font-nasalization focus-within:outline-none"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "invalid email format",
+                  },
+                })}
               />
-              {errors.email && errors.email.type === "required" && (
-                <span className="text-red-600 font-nasalization text-xs font-thin">
-                  **This field is required**
-                </span>
-              )}
+              <span className="text-red-600 font-nasalization text-xs font-thin">
+                {errors.email?.message}
+              </span>
             </div>
             <div className="basis-1/2 px-1 my-2 text-left">
               <input
@@ -185,24 +207,34 @@ const UserInfoForm = ({ passData }) => {
                 placeholder={
                   <span className="font-nasalization">Choose Event</span>
                 }
-                onChange={(e) => handleChange(e)}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
                 className="w-full my-2"
               />
             </div>
             <div className="mx-auto flex flex-wrap justify-center mt-3">
               {selectedEvent?.ticket.map((ticket) => (
-                <div className="p-1 basis-1/2 ">
+                <div className="p-1 md:basis-1/2 ">
                   <div
                     className="font-nasalization px-1 xl:px-5 border-2 py-5 rounded-xl"
                     key={ticket.type}
                   >
                     <h1 className="border border-white px-5 py-3 rounded-xl cursor-pointer bg-white text-black">
-                      {ticket.price}
+                      BDT {ticket.price}
                     </h1>
                     <h1>{ticket.type}</h1>
+
+                    <p>
+                      available tickets:{" "}
+                      <span className="text-red-500">
+                        {ticketsSold[ticket.type]}
+                      </span>
+                    </p>
                     <CartCounter
                       ticketInfo={ticket}
                       clickHandler={countHandler}
+                      remainedTicket={ticketsSold[ticket.type]}
                     />
                   </div>
                 </div>
@@ -254,7 +286,6 @@ const UserInfoForm = ({ passData }) => {
           </button>
         </div>
       </form>
-      {/* <DevTool control={control} /> */}
     </div>
   );
 };

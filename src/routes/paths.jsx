@@ -1,5 +1,6 @@
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import Checkout from "../Pages/Checkout/Checkout";
+import DownloadTicket from "../Pages/DownloadTicket/DownloadTicket";
 import Events from "../Pages/Events/Events";
 import Home from "../Pages/Home/Home";
 
@@ -76,13 +77,19 @@ export const routes = [
   {
     id: 11,
     name: "Payment Failed",
-    path: "/failed",
+    path: "/fail",
     element: <FailedUrl />,
   },
   {
     id: 12,
     name: "Payment Cancelled",
-    path: "/cancelled",
+    path: "/cancel",
     element: <CancelUrl />,
+  },
+  {
+    id: 13,
+    name: "Download Ticket",
+    path: "/download-ticket",
+    element: <DownloadTicket />,
   },
 ];

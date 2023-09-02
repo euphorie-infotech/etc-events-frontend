@@ -10,19 +10,39 @@ export const getApiData = (url) => {
       .get(liveApiUrl + "/" + url )
       .then((response) => {
         resolve(response.data);
-        console.log(response.data);
       })
       .catch(reject);
   });
 };
 
 // function to post data to api using axios
-export const postApiData = async (url, data) => {
+export const postApiData = async (url, data, errorHandler) => {
     axios
       .post(liveApiUrl + "/" + url, data)
       .then((response) => {
-        console.log(response);
-        window.location.replace(response.data.data);
+        window.location.replace(response.data.url);
+      })
+      .catch(error => {
+        errorHandler(error.response.data.message);
+      });
+  // return new Promise((resolve, reject) => {
+  //   console.log(liveApiUrl + "/" + url)
+  //   axios
+  //     .post(liveApiUrl + "/" + url, data)
+  //     .then((response) => {
+  //       resolve(response.data);
+  //     })
+  //     .catch(reject);
+  // });
+};
+
+// post sslcommerce
+
+export const postSslCommerce = async (url, data) => {
+    axios
+      .post(liveApiUrl + "/" + url, data)
+      .then((response) => {
+        response.data.data && window.location.replace(response.data.data);
       })
       .catch(error => {
         console.log(error)

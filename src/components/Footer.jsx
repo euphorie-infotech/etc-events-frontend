@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="basis-full md:basis-1/3 flex sm:justify-center md:items-center">
           <h1 className="font-nasalization mt-5 border p-2 md:w-1/2 text-center rounded-lg text-xs md:text-sm">
-            Trade License: <span className="tracking-widest">4161</span>
+            Trade License: <span className="tracking-widest">004161</span>
           </h1>
         </div>
         <div className="basis-full md:basis-1/3 flex justify-end items-center">

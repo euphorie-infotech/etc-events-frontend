@@ -1,12 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React from "react";
-import { postApiData } from "../../../Services/apiFunctions";
+import { postSslCommerce } from "../../../Services/apiFunctions";
 
 const PurchaseInfo = ({ purchaseData }) => {
   const queryClient = useQueryClient();
 
   const postPurchaseData = (data) => {
-    return postApiData("pay-via-ajax", data);
+    return postSslCommerce("pay-via-ajax", data);
   };
 
   const { mutate } = useMutation(postPurchaseData, {

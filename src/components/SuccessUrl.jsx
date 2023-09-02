@@ -1,12 +1,20 @@
 import React from "react";
-import Ticket from "./Ticket";
+import { useNavigate } from "react-router-dom";
 
 const SuccessUrl = () => {
+  const navigate = useNavigate();
   return (
-    <section className="min-h-screen bg-black text-white">
-      <div className="w-full h-screen flex justify-center items-center">
-        <button className="font-nasalization hover:tracking-widest transition-all duration-500 border px-12 py-3 rounded-lg">
-          Download Ticket
+    <section className="min-h-screen bg-black text-white flex justify-center">
+      <div className="w-3/4 text-center h-screen flex flex-col justify-center items-center">
+        <h1 className="font-nasalization text-2xl">Payment Successfull</h1>
+        <h1 className="font-nasalization text-2xl mt-5">
+          Thank you for letting us serve you!!!
+        </h1>
+        <button
+          className="border text-white border-white px-5 py-3 mt-16 rounded-md font-nasalization hover:bg-white hover:text-black transition-all duration-500 "
+          onClick={() => navigate("/download-ticket")}
+        >
+          Click this Link to download your tickets
         </button>
       </div>
     </section>

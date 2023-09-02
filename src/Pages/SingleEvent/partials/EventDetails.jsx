@@ -1,5 +1,5 @@
 import React from "react";
-import eventBanner from "../../../assets/events/poster-02.jpg";
+import eventBanner from "../../../assets/events/poster-02.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
@@ -51,9 +51,6 @@ const EventDetails = () => {
           <h1 className="font-nasalization mb-5 text-xl">Ticket Category</h1>
           <div className="flex flex-wrap items-center justify-center">
             <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
-              <h1 className="font-nasalization">Early Birds</h1>
-            </div>
-            <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
               <h1 className="font-nasalization">Rockers</h1>
             </div>
             <div className="basis-full md:basis-1/3 border px-5 py-2 rounded-lg m-2">
@@ -65,17 +62,11 @@ const EventDetails = () => {
           </div>
         </div>
         <div>
-          {/* <button
+          <button
             className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black w-full"
             onClick={() => navigate("/checkout")}
           >
             Proceed to checkout
-          </button> */}
-          <button
-            className="font-nasalization hover:tracking-widest transition-all duration-500 border border-white px-10 py-3 rounded-md hover:bg-white hover:text-black w-full"
-            // onClick={() => navigate("/checkout")}
-          >
-            Tickets will be open soon!!!
           </button>
         </div>
       </div>

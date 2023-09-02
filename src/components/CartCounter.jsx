@@ -2,7 +2,7 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
-const CartCounter = ({ ticketInfo, clickHandler }) => {
+const CartCounter = ({ ticketInfo, clickHandler, remainedTicket }) => {
   const [count, setCount] = useState(0);
   // console.log(ticketInfo);
   const handleData = () => {
@@ -28,7 +28,11 @@ const CartCounter = ({ ticketInfo, clickHandler }) => {
         <div className="basis-1/3 cursor-pointer">
           <FontAwesomeIcon
             icon={faPlus}
-            onClick={() => setCount((prevState) => prevState + 1)}
+            onClick={() =>
+              setCount((prevState) =>
+                prevState < remainedTicket ? prevState + 1 : remainedTicket
+              )
+            }
           />
         </div>
       </div>

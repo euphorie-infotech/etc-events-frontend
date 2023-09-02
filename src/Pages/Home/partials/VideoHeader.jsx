@@ -5,8 +5,10 @@ import headerImage1 from "../../../assets/images/jana-kunz-Ra3-o60F1rc-unsplash.
 import headerImage2 from "../../../assets/images/sandra-seitamaa-Zcr67MPWsSM-unsplash.jpg";
 import headerImage3 from "../../../assets/images/blake-carpenter-HkvRp7ZL8Ug-unsplash.jpg";
 import headerImage4 from "../../../assets/images/kelvin-moquete-LOV7Gbmgm30-unsplash.jpg";
+import { useNavigate } from "react-router-dom";
 
 const VideoHeader = () => {
+  const navigate = useNavigate();
   return (
     <section className="shadow-inner">
       <video
@@ -35,11 +37,14 @@ const VideoHeader = () => {
             strategy, creativity, and technology to deliver solutions that
             inspire, building on a legacy spanning proudly.
           </p>
-          <a href="https://www.facebook.com/etceventsltd/" target="blank">
-            <button className="px-12 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-500 rounded-lg mt-5 hover:px-16 font-nasalization">
-              Know More
-            </button>
-          </a>
+          {/* <a href="https://www.facebook.com/etceventsltd/" target="blank"> */}
+          <button
+            className="px-12 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-500 rounded-lg mt-5 hover:px-16 font-nasalization"
+            onClick={() => navigate("/checkout")}
+          >
+            Buy Tickets
+          </button>
+          {/* </a> */}
         </div>
         <div className="hidden lg:flex basis-1/2 h-full">
           <div className="basis-1/2 flex flex-col justify-between">

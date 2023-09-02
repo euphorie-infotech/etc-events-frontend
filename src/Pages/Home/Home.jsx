@@ -3,6 +3,7 @@ import VideoHeader from "./partials/VideoHeader";
 import AboutUs from "./partials/AboutUs";
 import GetStarted from "./partials/GetStarted";
 import UpcomingEvents from "./partials/UpcomingEvents";
+import NewsMedia from "./partials/NewsMedia";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <VideoHeader />
       <UpcomingEvents />
       <AboutUs />
+      <NewsMedia />
       <GetStarted />
     </>
   );
